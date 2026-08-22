@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-id="notice_v1">
+<html lang="ar" dir="rtl" data-id="notice_v2">
 
 <head>
     <meta charset="UTF-8">
@@ -92,7 +92,7 @@
 
     <script>
         function markAsRead() {
-            const noticeId = document.documentElement.getAttribute('data-id') || 'notice_v2';
+            const noticeId = document.documentElement.getAttribute('data-id') || 'notice_v1';
             window.parent.postMessage({
                 type: 'MARK_ANNOUNCEMENT_READ',
                 id: noticeId
