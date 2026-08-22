@@ -92,7 +92,7 @@
 
     <script>
         function markAsRead() {
-            const noticeId = document.documentElement.getAttribute('data-id') || 'notice_v1';
+            const noticeId = document.documentElement.getAttribute('data-id') || 'notice_v2';
             window.parent.postMessage({
                 type: 'MARK_ANNOUNCEMENT_READ',
                 id: noticeId
