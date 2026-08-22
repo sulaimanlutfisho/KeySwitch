@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-id="notice_v1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إشعار جديد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="announcement-card">
+        <i class="fa-solid fa-lightbulb card-icon"></i>
+        <h2 class="card-title">نصيحة اليوم</h2>
+        <p class="card-body">
+            لا تنسَ أداء الصلاة في وقتها، واستقطاع وقت للراحة لتجديد نشاطك أثناء البرمجة
+        </p>
+
+        <!-- From Uiverse.io by ercnersoy -->
+        <button class="button" onclick="markAsRead()">
+            <span class="text">تمت القراءة <i class="fa-solid fa-check"></i></span>
+            <div class="wave"></div>
+        </button>
+
+
+
+
+
+
+    </div>
+
+    <script>
+        function markAsRead() {
+            const noticeId = document.documentElement.getAttribute('data-id') || 'notice_v1';
+            window.parent.postMessage({
+                type: 'MARK_ANNOUNCEMENT_READ',
+                id: noticeId
+            }, '*');
+        }
+    </script>
+</body>
+
+</html>
